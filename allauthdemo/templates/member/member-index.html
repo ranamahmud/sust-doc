@@ -35,6 +35,7 @@
         <li>Last name: <strong>{{user.last_name}}</strong></li>
         <li>Display name: <strong>{{user.display_name}}</strong></li>
         <li>Email: <strong>{{user.email}}</strong></li>
+        <li>Department: <strong>{{user.department}}</strong></li>
         <li>{% if request.user.profile.account_verified %}Verified{% else %}Unverified{% endif %}</li>
       </ul>
       <a href="{% url 'account_profile' %}">Edit</a>
