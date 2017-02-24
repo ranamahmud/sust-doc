@@ -28,6 +28,9 @@ urlpatterns = [
     url(r'^about$', TemplateView.as_view(template_name='visitor/landing-about.html'), name='landing_about'),
     url(r'^terms/$', TemplateView.as_view(template_name='visitor/terms.html'), name='website_terms'),
     url(r'^contact$', TemplateView.as_view(template_name='visitor/contact.html'), name='website_contact'),
+    
+    #Library fine area
+    url(r'^library/new/$', TemplateView.as_view(template_name='libraryfine/library-fine.html'), name='library_fine_new'),
 
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
