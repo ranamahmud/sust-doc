@@ -31,7 +31,10 @@ urlpatterns = [
     
     #Library fine area
     url(r'^library/new/$', TemplateView.as_view(template_name='libraryfine/library-fine.html'), name='library_fine_new'),
-
+   
+    #Shahparan Hall
+    url(r'^hall/new/$', TemplateView.as_view(template_name='hall/hall.html'), name='shahparan_hall_new'),
+   
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
 

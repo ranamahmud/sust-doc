@@ -1,16 +1,31 @@
 {% extends "bases/bootstrap-member.html" %}
 
-{% block head_title %}Action{% endblock %}
+{% block head_title %}DOCS{% endblock %}
 
 {% block content %}
 <div class="container">
-<ul>
-    <li>Library Fine</li>
-    <a href="{% url 'library_fine_new' %}"
 
- class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span></a>
-</ul>
+        <a href="{% url 'library_fine_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> Library Fine</a><br>
+
+        <a href="{% url 'shahparan_hall_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> Shahparan Hall Admission Form</a><br>
+
+        <a href="{% url 'transcript_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> Transcript</a><br>
+
+        <a href="{% url 'certificate_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> Certificate</a><br>
+
+        <a href="{% url 'cash_memo_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> Cash memo</a><br>
+
+        <a href="{% url 'std_2_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> STD-2</a><br>
+
+        <a href="{% url 'std_6_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
+     </span> STD-6</a><br>
+
 </div>
 {% endblock %}
 
