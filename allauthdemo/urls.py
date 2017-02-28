@@ -34,6 +34,16 @@ urlpatterns = [
    
     #Shahparan Hall
     url(r'^hall/new/$', TemplateView.as_view(template_name='hall/hall.html'), name='shahparan_hall_new'),
+   #Transcript
+    url(r'^transcript/new/$', TemplateView.as_view(template_name='registrar/transcript.html'), name='transcript_new'),
+    #Certificate
+    url(r'^certificate/new/$', TemplateView.as_view(template_name='registrar/certificate.html'), name='certificate_new'),
+    #Cash
+    url(r'^cashmemo/new/$', TemplateView.as_view(template_name='bank/cashmemo.html'), name='cash_memo_new'),
+    #STD 2
+    url(r'^std2/new/$', TemplateView.as_view(template_name='bank/std2.html'), name='std_2_new'),
+    #STD 6
+    url(r'^std6/new/$', TemplateView.as_view(template_name='bank/std6.html'), name='std_6_new'),
    
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
