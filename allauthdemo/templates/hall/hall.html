@@ -3,5 +3,9 @@
 {% block head_title %}Shahparan Hall | DOCS{% endblock %}
 
 {% block content %}
-Shahparan Hall
+<h1>Shahparan Hall Admission Form</h1>
+ <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
 {% endblock %}

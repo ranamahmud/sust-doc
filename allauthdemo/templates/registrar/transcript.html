@@ -3,5 +3,9 @@
 {% block head_title %}Transcript | DOCS{% endblock %}
 
 {% block content %}
-Transcript
+<h1>Transcript</h1>
+ <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
 {% endblock %}

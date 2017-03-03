@@ -30,20 +30,19 @@ urlpatterns = [
     url(r'^contact$', TemplateView.as_view(template_name='visitor/contact.html'), name='website_contact'),
     
     #Library fine area
-    # url(r'^library/new/$', TemplateView.as_view(template_name='libraryfine/library-fine.html'), name='library_fine_new'),
     url(r'^library/new/$', views.library_fine_new, name='library_fine_new'),
     #Shahparan Hall
-    url(r'^hall/new/$', TemplateView.as_view(template_name='hall/hall.html'), name='shahparan_hall_new'),
+    url(r'^hall/new/$', views.shahparan_hall_new, name='shahparan_hall_new'),
    #Transcript
-    url(r'^transcript/new/$', TemplateView.as_view(template_name='registrar/transcript.html'), name='transcript_new'),
+    url(r'^transcript/new/$', views.transcript_new, name='transcript_new'),
     #Certificate
-    url(r'^certificate/new/$', TemplateView.as_view(template_name='registrar/certificate.html'), name='certificate_new'),
+    url(r'^certificate/new/$',views.certificate_new, name='certificate_new'),
     #Cash
-    url(r'^cashmemo/new/$', TemplateView.as_view(template_name='bank/cashmemo.html'), name='cash_memo_new'),
+    url(r'^cashmemo/new/$', views.cash_memo_new, name='cash_memo_new'),
     #STD 2
-    url(r'^std2/new/$', TemplateView.as_view(template_name='bank/std2.html'), name='std_2_new'),
+    url(r'^std2/new/$', views.STD_2_new, name='std_2_new'),
     #STD 6
-    url(r'^std6/new/$', TemplateView.as_view(template_name='bank/std6.html'), name='std_6_new'),
+    url(r'^std6/new/$', views.STD_6_new, name='std_6_new'),
    
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
