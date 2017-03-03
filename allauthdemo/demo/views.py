@@ -1,21 +1,18 @@
 from django.shortcuts import render, get_object_or_404
-# Create your views here.
-#Library Fine list's view
+from django.contrib.auth.decorators import login_required
 from .models import LibraryFine
 from .forms import LibraryFineForm
-# def fine_list(request):
-#     fines = LibraryFine.published.all()
-#     return render(request,)
 
 
 
 @login_required
 def library_fine_new(request):
     form = LibraryFineForm()
-    t = loader.get_template('libraryfine/library-fine.html')
-    c = {'form':form}  #{'foo': 'bar'}
-    return HttpResponse(t.render(c, request), content_type='text/html')
-    # return render(request,'libraryfine/library-fine.html',{'form':form})
+    # if form.is_valid():
+    #     t = loader.get_template('libraryfine/library-fine.html')
+    #     c = {'form':form}  #{'foo': 'bar'}
+    # return HttpResponse(t.render(c, request), content_type='text/html')
+    return render(request,'libraryfine/library-fine.html',{'form':form})
 
 
 

@@ -1,6 +1,6 @@
-from django.forms import ModelForm
-from demo.models import LibraryFine
-class LibraryFineForm(ModelForm):
+from django import forms
+from .models import LibraryFine
+class LibraryFineForm(forms.ModelForm):
 
     class Meta:
         model = LibraryFine

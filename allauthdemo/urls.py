@@ -21,7 +21,7 @@ from django.conf import settings
 
 from .auth.views import account_profile
 from .views import member_index, member_action
-
+from demo import views 
 urlpatterns = [
     # Landing page area
     url(r'^$', TemplateView.as_view(template_name='visitor/landing-index.html'), name='landing_index'),
@@ -30,8 +30,8 @@ urlpatterns = [
     url(r'^contact$', TemplateView.as_view(template_name='visitor/contact.html'), name='website_contact'),
     
     #Library fine area
-    url(r'^library/new/$', TemplateView.as_view(template_name='libraryfine/library-fine.html'), name='library_fine_new'),
-   
+    # url(r'^library/new/$', TemplateView.as_view(template_name='libraryfine/library-fine.html'), name='library_fine_new'),
+    url(r'^library/new/$', views.library_fine_new, name='library_fine_new'),
     #Shahparan Hall
     url(r'^hall/new/$', TemplateView.as_view(template_name='hall/hall.html'), name='shahparan_hall_new'),
    #Transcript

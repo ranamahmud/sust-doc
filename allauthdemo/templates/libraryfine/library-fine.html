@@ -3,10 +3,8 @@
 
 {% block content %}
 <h1>Create Library Fine Application</h1>
-
-    <form action="." method="post">
-{{ form.as_p }}
-{% csrf_token %}
-<input type="submit" value="Submit">
-</form>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
 {% endblock %}
