@@ -11,9 +11,12 @@ from .forms import LibraryFineForm
 
 @login_required
 def library_fine_new(request):
+    form = LibraryFineForm()
     t = loader.get_template('libraryfine/library-fine.html')
-    c = {}  #{'foo': 'bar'}
+    c = {'form':form}  #{'foo': 'bar'}
     return HttpResponse(t.render(c, request), content_type='text/html')
+    # return render(request,'libraryfine/library-fine.html',{'form':form})
+
 
 
 @login_required
@@ -50,3 +53,4 @@ def STD_6_new(request):
     t = loader.get_template('libraryfine/library-fine.html')
     c = {}  #{'foo': 'bar'}
     return HttpResponse(t.render(c, request), content_type='text/html')
+
