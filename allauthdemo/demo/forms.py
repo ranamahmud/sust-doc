@@ -19,10 +19,10 @@ class TranscriptForm(forms.ModelForm):
     class Meta:
         model = Transcript
         fields = '__all__'
-class CertificateForm(forms.ModelForm):
+class GradesheeteForm(forms.ModelForm):
     
     class Meta:
-        model = Certificate
+        model = Gradesheet
         fields = '__all__'
 class CashMemoForm(forms.ModelForm):
     

@@ -1,9 +1,9 @@
 {% extends "bases/bootstrap-member.html" %}
 
-{% block head_title %}Certificate | DOCS{% endblock %}
+{% block head_title %}Gradesheet | DOCS{% endblock %}
 
 {% block content %}
-<h1>Certificate</h1>
+<h1>Gradesheet</h1>
  <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>

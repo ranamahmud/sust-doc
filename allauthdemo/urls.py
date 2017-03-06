@@ -35,8 +35,8 @@ urlpatterns = [
     url(r'^hall/new/$', views.shahparan_hall_new, name='shahparan_hall_new'),
    #Transcript
     url(r'^transcript/new/$', views.transcript_new, name='transcript_new'),
-    #Certificate
-    url(r'^certificate/new/$',views.certificate_new, name='certificate_new'),
+    #Gradesheet
+    url(r'^gradesheet/new/$',views.gradesheet_new, name='gradesheet_new'),
     #Cash
     url(r'^cashmemo/new/$', views.cash_memo_new, name='cash_memo_new'),
     #STD 2

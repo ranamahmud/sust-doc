@@ -50,16 +50,16 @@ def transcript_new(request):
 
 
 @login_required
-def certificate_new(request):
+def gradesheet_new(request):
     if request.method == "POST":
-            form = CertificateForm(request.POST)
+            form = GradesheeteForm(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
                 post.published_date = timezone.now()
                 post.save()
     else:
-        form = CertificateForm()
-    return render(request,'registrar/certificate.html',{'form':form})
+        form = GradesheeteForm()
+    return render(request,'registrar/gradesheet.html',{'form':form})
 
 @login_required
 def cash_memo_new(request):
