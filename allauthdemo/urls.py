@@ -40,7 +40,7 @@ urlpatterns = [
     #Cash
     url(r'^cashmemo/new/$', views.cash_memo_new, name='cash_memo_new'),
     #STD 2
-    url(r'^std2/new/$', views.STD_2_new, name='std_2_new'),
+    url(r'^s2/new/$', views.S_2_new, name='s_2_new'),
     #STD 6
     url(r'^std6/new/$', views.STD_6_new, name='std_6_new'),
    

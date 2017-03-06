@@ -75,15 +75,15 @@ def cash_memo_new(request):
 
 
 @login_required
-def STD_2_new(request):
+def S_2_new(request):
     if request.method == "POST":
-            form = STD2Form(request.POST)
+            form = S2Form(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
                 post.published_date = timezone.now()
                 post.save()
     else:
-        form = STD2Form()
+        form = S2Form()
     return render(request,'bank/std2.html',{'form':form})
 
 @login_required

@@ -5,6 +5,8 @@ class LibraryFineForm(forms.ModelForm):
     class Meta:
         model = LibraryFine
         fields = '__all__'
+        # fields = ['date','gender','book_count','amount_fined']
+
 
 
 class ShahparanHallForm(forms.ModelForm):
@@ -27,10 +29,10 @@ class CashMemoForm(forms.ModelForm):
     class Meta:
         model = CashMemo
         fields = '__all__'
-class STD2Form(forms.ModelForm):
+class S2Form(forms.ModelForm):
     
     class Meta:
-        model = STD2
+        model = S2
         fields = '__all__'
 class STD6Form(forms.ModelForm):
     
