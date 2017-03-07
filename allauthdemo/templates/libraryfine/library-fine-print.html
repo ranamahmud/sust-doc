@@ -1,0 +1,33 @@
+{% extends "bases/bootstrap-member.html" %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% load account socialaccount %}
+{% block title %}
+{% block head_title %}{% trans "Print Library Fine" %}{% endblock %}
+{% endblock %}
+{% block content %}
+<div class="text-center">
+<h1>Print your application</h1>
+ <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+                {{post.user}}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+
+
+    {{ user.department}} {{ user.year }} 
+    {{ post.book_count }}
+    {{ post.amount_fined }}
+    {{ user.name }}
+    {{ user.department }}
+    {{ user.reg_no }}
+    {{ user.year }}
+    {{ user.semseter }}
+  
+</div>
+{% endblock content %}

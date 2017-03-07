@@ -31,18 +31,26 @@ urlpatterns = [
     
     #Library fine area
     url(r'^library/new/$', views.library_fine_new, name='library_fine_new'),
+    url(r'^library-fine/(?P<pk>\d+)/$', views.library_fine_print, name='library_fine_print'),
     #Shahparan Hall
     url(r'^hall/new/$', views.shahparan_hall_new, name='shahparan_hall_new'),
+    url(r'^shahparan-hall/(?P<pk>\d+)/$', views.shahparan_hall_print, name='shahparan_hall_print'),
+
    #Transcript
     url(r'^transcript/new/$', views.transcript_new, name='transcript_new'),
+    url(r'^transcript/(?P<pk>\d+)/$', views.transcript_print, name='transcript_print'),
     #Gradesheet
     url(r'^gradesheet/new/$',views.gradesheet_new, name='gradesheet_new'),
+    url(r'^gradesheet/(?P<pk>\d+)/$', views.gradesheet_print, name='gradesheet_print'),
     #Cash
     url(r'^cashmemo/new/$', views.cash_memo_new, name='cash_memo_new'),
+    url(r'^cashmemo/(?P<pk>\d+)/$', views.cashmemo_print, name='cashmemo_print'),
     #STD 2
     url(r'^s2/new/$', views.S_2_new, name='s_2_new'),
+    url(r'^s2/(?P<pk>\d+)/$', views.s2_print, name='s2_print'),
     #STD 6
     url(r'^std6/new/$', views.STD_6_new, name='std_6_new'),
+    url(r'^std6/(?P<pk>\d+)/$', views.std6_print, name='std6_print'),
    
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
