@@ -1,11 +1,24 @@
 {% extends "bases/bootstrap-member.html" %}
-
-{% block head_title %}STD6 | DOCS{% endblock %}
+{% load i18n %}
+{% load bootstrap3 %}
+{% load account socialaccount %}
+{% block title %}
+{% block head_title %}{% trans "STD-6" %}{% endblock %}
+{% endblock %}
 
 {% block content %}
-STD 6
- <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+  
+          <h1 class="text-center">STD-6</h1>
+
+      <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+
+    <form class="std6" method="POST">
+
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <div class="form-actions">
+        <button class="btn btn-primary pull-right" type="submit">{% trans "Save" %}</button>
+      
+      </div>
+    </form
 {% endblock %}

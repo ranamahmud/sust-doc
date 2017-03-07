@@ -84,7 +84,7 @@ def S_2_new(request):
                 post.save()
     else:
         form = S2Form()
-    return render(request,'bank/std2.html',{'form':form})
+    return render(request,'bank/s2.html',{'form':form})
 
 @login_required
 def STD_6_new(request):
