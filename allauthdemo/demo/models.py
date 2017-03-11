@@ -19,8 +19,8 @@ class LibraryFine(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 
 class ShahparanHall(models.Model):
@@ -63,8 +63,8 @@ class ShahparanHall(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 
 class Transcript(models.Model):
@@ -87,8 +87,8 @@ class Transcript(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 
 class Gradesheet(models.Model):
@@ -114,8 +114,8 @@ class Gradesheet(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 class CashMemo(models.Model):
     G_CHOICES = (('1','Male'),('2','Female'))
@@ -139,8 +139,8 @@ class CashMemo(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 class S2(models.Model):
     G_CHOICES = (('1','Male'),('2','Female'))
@@ -186,8 +186,8 @@ class S2(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title
 
 class STD6(models.Model):
     G_CHOICES = (('1','Male'),('2','Female'))
@@ -224,5 +224,5 @@ class STD6(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    def __str__(self):
-        return self.title
+#     def __str__(self):
+#         return self.title

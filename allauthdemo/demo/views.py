@@ -11,7 +11,7 @@ from xhtml2pdf import pisa
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.http import HttpResponse
-
+from .. auth.models import DemoUser
 #LibraryFine
 @login_required
 def library_fine_new(request):
@@ -19,6 +19,8 @@ def library_fine_new(request):
         form = LibraryFineForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
+            #user 
+            post.user = request.user
             post.published_date = timezone.now()
             post.save()
             return redirect('library_fine_print',pk = post.pk)

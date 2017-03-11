@@ -4,8 +4,8 @@ class LibraryFineForm(forms.ModelForm):
 
     class Meta:
         model = LibraryFine
-        fields = '__all__'
-        # fields = ['date','gender','book_count','amount_fined']
+        # fields = '__all__'
+        fields = ['date','gender','book_count','amount_fined']
 
 
 
@@ -14,6 +14,7 @@ class ShahparanHallForm(forms.ModelForm):
     class Meta:
         model = ShahparanHall
         fields = '__all__'
+        exclude = ['user']
 class TranscriptForm(forms.ModelForm):
     
     class Meta:
