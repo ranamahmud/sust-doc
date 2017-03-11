@@ -28,7 +28,8 @@
     {{ user.reg_no }}
     {{ user.year }}
     {{ user.semseter }}
-  
+    <br>
+  <a class="btn btn-primary" href="{% url 'download_library_fine_pdf' post.pk %}" role="button">Download</a>
 </div>
 
 {% endblock content %}

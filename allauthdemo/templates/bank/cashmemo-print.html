@@ -27,5 +27,6 @@
     {{ user.year }}
     {{ user.semseter }}
   
+  <a class="btn btn-primary" href="{% url 'download_cashmemo_pdf' post.pk %}" role="button">Download</a>
 </div>
 {% endblock content %}
