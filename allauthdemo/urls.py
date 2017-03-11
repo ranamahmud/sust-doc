@@ -32,25 +32,38 @@ urlpatterns = [
     #Library fine area
     url(r'^library/new/$', views.library_fine_new, name='library_fine_new'),
     url(r'^library-fine/(?P<pk>\d+)/$', views.library_fine_print, name='library_fine_print'),
+    # Download pdf of library fine
+    url(r'^library-fine/(?P<pk>\d+)/pdf/$', views.library_fine_pdf, name='download_library_fine_pdf'),
+
     #Shahparan Hall
     url(r'^hall/new/$', views.shahparan_hall_new, name='shahparan_hall_new'),
     url(r'^shahparan-hall/(?P<pk>\d+)/$', views.shahparan_hall_print, name='shahparan_hall_print'),
+    url(r'^shahparan-hall/(?P<pk>\d+)/pdf/$', views.library_fine_pdf, name='download_shahparan_pdf'),
 
    #Transcript
     url(r'^transcript/new/$', views.transcript_new, name='transcript_new'),
     url(r'^transcript/(?P<pk>\d+)/$', views.transcript_print, name='transcript_print'),
+    url(r'^transcript/(?P<pk>\d+)/pdf/$', views.transcript_pdf, name='download_transcript_pdf'),
+
     #Gradesheet
     url(r'^gradesheet/new/$',views.gradesheet_new, name='gradesheet_new'),
     url(r'^gradesheet/(?P<pk>\d+)/$', views.gradesheet_print, name='gradesheet_print'),
+    url(r'^gradesheet/(?P<pk>\d+)/pdf/$', views.gradesheet_pdf, name='download_gradesheet_pdf'),
+
     #Cash
     url(r'^cashmemo/new/$', views.cash_memo_new, name='cash_memo_new'),
     url(r'^cashmemo/(?P<pk>\d+)/$', views.cashmemo_print, name='cashmemo_print'),
+    url(r'^cashmemo/(?P<pk>\d+)/pdf/$', views.cashmemo_pdf, name='download_cashmemo_pdf'),
+
     #STD 2
     url(r'^s2/new/$', views.S_2_new, name='s_2_new'),
     url(r'^s2/(?P<pk>\d+)/$', views.s2_print, name='s2_print'),
+    url(r'^s2/(?P<pk>\d+)/pdf/$', views.s2_pdf, name='download_s_2_pdf'),
+
     #STD 6
     url(r'^std6/new/$', views.STD_6_new, name='std_6_new'),
     url(r'^std6/(?P<pk>\d+)/$', views.std6_print, name='std6_print'),
+    url(r'^std6/(?P<pk>\d+)/pdf/$', views.std6_pdf, name='download_std_6_pdf'),
    
     # Account management is done by allauth
     url(r'^accounts/', include('allauth.urls')),
