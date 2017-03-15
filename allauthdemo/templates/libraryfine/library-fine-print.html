@@ -10,7 +10,7 @@
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/paper.css' %}" />
 <h1 class="text-center">Print your application</h1>
- <page size="A4">
+ <page size="A4" class="library-fine">
 
 তারিখ: {{ post.date }}<br>
 বরাবর,<br>
@@ -32,7 +32,7 @@
 নাম: {{ user.name }} <br>
 বিভাগ: {{ user.department }}<br>
 রেজি নং: {{ user.reg_no }}<br>
-বর্ষ/সেমিস্টার : {{ user.year }}/{{ user.semester}} ৃ<br>
+বর্ষ/সেমিস্টার : {{ user.year }}/{{ user.semester}} <br>
 ব্যাংক রসিদ নং : {{ post.receipt }}<br>
 স্বাক্ষর: <br>
  </page>

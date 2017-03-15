@@ -2,33 +2,144 @@
 {% load i18n %}
 {% load bootstrap3 %}
 {% load account socialaccount %}
+{% load static %}
 {% block title %}
 {% block head_title %}{% trans "Print Shahparan Hall" %}{% endblock %}
 {% endblock %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/paper.css' %}" />
+
 <div class="text-center">
 <h1>Print your Shahparan Hall Admission application</h1>
- <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-                {{post.user}}
-            </div>
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+</div>
+<page size="A4" class="shahparan-hall">
+<div class="text-center">
+<h4>শাহপরাণ হল</h4>
+<h4>শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়</h4>
+<h4>হলে ভর্তির জন্য অাবেদন ফরম</h4>
+</div>
+০১। অাবেদনকারী ছাত্রের নাম (ইংরেজী বড় অক্ষরে ) : <br>
+০২। অাবেদনকারী ছাত্রের মোবাইল নং: <br>
+০৩। পিতা/অভিভাবকের নাম (ইংরেজী বড় অক্ষরে): <br> 
+০৪। মাতার নাম (ইংরেজী বড় অক্ষরে): <br>
+০৫। স্থায়ী ঠিকানা: গ্রাম/সড়ক: ডাকঘর:<br>
+থানা:  জেলা:
+০৬। বর্তমান ঠিকানা:  গ্রাম/সড়ক: ডাকঘর:<br>
+থানা:  জেলা: <br>
+০৭। বিজ্ঞান/দপ্তর: বর্ষ/সেমি: শিক্ষাবর্ষ: সেমিস্টার: <br>
+০৮। স্নাতক প্রথম সেমিস্টারের ছাত্র  হলে ভর্তি পরীক্ষায় মেধাস্থান: <br>
+০৯। সর্বশেষ পরীক্ষার ফলাফলের বিবরণ:
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-baqh{text-align:center;vertical-align:top}
+.tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg" style="undefined;table-layout: fixed; width: 600px">
+<colgroup>
+<col style="width: 102px">
+<col style="width: 107px">
+<col style="width: 98px">
+<col style="width: 145px">
+<col style="width: 68px">
+<col style="width: 80px">
+</colgroup>
+  <tr>
+    <th class="tg-amwm">পরীক্ষার নাম<br></th>
+    <th class="tg-amwm">পাসের বছর<br></th>
+    <th class="tg-amwm">সেমিস্টার</th>
+    <th class="tg-amwm">ক্রমযোজিত ক্রেডিট<br></th>
+    <th class="tg-amwm">সিজিপিএ</th>
+    <th class="tg-amwm">মন্তব্য</th>
+  </tr>
+  <tr>
+    <td class="tg-baqh">১ম বর্ষ<br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">১ম সেমিস্টার<br></td>
+    <td class="tg-yw4l"><br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><br></td>
+    <td class="tg-yw4l"><br></td>
+    <td class="tg-baqh">২য় সেমিস্টার<br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">২য় বর্ষ<br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">১ম সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">২য় সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">৩য় বর্ষ<br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">১ম সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">২য় সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">৪ র্থ বর্ষ<br></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">১ম সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-baqh">২য় সেমিস্টার</td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+</table>
+<span>বিভাগীয় শিক্ষক কর্তৃক সত্যায়িত</span>
+১০। ব্যাংকে জমাকৃত টাকার পরিমাণ: ব্যাংক রশিদ নং: তারিখ: <br>
+অামি এই মর্মে ঘোষণা করছি যে , এই অাবেদন ফরমে অামার তথ্য দেয়া নির্ভুল । অামি মেনে নিচ্ছি যে অামার দেয়া
+কোন তথ্য ভুল প্রমাণ হলে অামার দরখাস্ত বাতিল বলে গণ্য হবে । হলে ভর্তির পরে কোন তথ্য ভুল প্রমাণ হলে হলে সিট বাতিল হয়ে যাবে
+এবং বিধি মোতাবেক ব্যবস্থা গৃহীত হলে তা অামি মেনে নিতে বাধ্য থাকবো । হল অধ্যাদেশে বর্ণিত শর্তসমূহ মেনে হলে 
+অবস্থান করব । এর ব্যত্যয় হলে কর্তৃপক্ষ কর্তৃক গৃহীত ব্যবস্থা মেনে নিতে বাধ্য থাকব । অামার অাবেদন গৃহীত হলে ভর্তির জন্য
+ফি সমূহ নির্দিষ্ট তারিখের মধ্যে প্রদানে বাধ্য থাকব । <br>
+তারিখ: অাবেদনকারীর স্বাক্ষর
+
+-------------------------------------------------------------------------------
+
+<span class="text-center">অফিস কর্তৃক পূরণীয়</span> <br>
+হলে ভর্তির জন্য বিবেচিত হল/হলনা । <br>
+বরাদ্দকৃত কক্ষ নং <br>
+
+উচ্চমান সহকারী স্বাক্ষর সিনিয়র হল সুপারের স্বাক্ষর সহ: প্রাধ্যক্ষের স্বাক্ষর প্রাধ্যক্ষের স্বাক্ষর
+
+    </page>
 
 
-    {{ user.department}} {{ user.year }} 
-  
-    {{ user.name }}
-    {{ user.department }}
-    {{ user.reg_no }}
-    {{ user.year }}
-    {{ user.semseter }}
-  <br>
-
+<div class="text-center">
   <a class="btn btn-primary" href="{% url 'download_shahparan_pdf' post.pk %}" role="button">Download</a>
 </div>
 {% endblock content %}
