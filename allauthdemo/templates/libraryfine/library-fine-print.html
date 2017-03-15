@@ -3,14 +3,25 @@
 {% load bootstrap3 %}
 {% load account socialaccount %}
 {% load static %}
-
 {% block title %}
 {% block head_title %}{% trans "Print Library Fine" %}{% endblock %}
 {% endblock %}
 {% block content %}
+ <style>
+        @font-face {
+        font-family: Nikosh;
+        /*src: url("c:/static/fonts/preeti.ttf");*/
+        src: url({% static "fonts/Nikosh.ttf" %});
+        }
+
+        body {
+        font-family: Nikosh;
+        }
+    </style>  
+
 <link rel="stylesheet" type="text/css" href="{% static 'css/paper.css' %}" />
 <h1 class="text-center">Print your application</h1>
- <page size="A4" class="library-fine">
+ <page size="A4" class="library-fine pdf">
 
 তারিখ: {{ post.date }}<br>
 বরাবর,<br>

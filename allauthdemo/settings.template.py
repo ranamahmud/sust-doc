@@ -102,6 +102,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # Authentication
 
 AUTHENTICATION_BACKENDS = (

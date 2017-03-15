@@ -2,32 +2,33 @@
 {% load i18n %}
 {% load bootstrap3 %}
 {% load account socialaccount %}
+{% load static %}
 {% block title %}
 {% block head_title %}{% trans "Transcript" %}{% endblock %}
 {% endblock %}
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/paper.css' %}" />
+
 <div class="text-center">
 <h1>Print Transcript</h1>
- <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-                {{post.user}}
-            </div>
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
-
-
-    {{ user.department}} {{ user.year }} 
-    {{ user.name }}
-    {{ user.department }}
-    {{ user.reg_no }}
-    {{ user.year }}
-    {{ user.semseter }}
-  <br>
+</div>
   
+<page size= "A4" class="transcript">
+
+<div class="text-center">
+    <img src="">
+<h4>শাহপরাণ হল</h4>
+<h4>শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়</h4>
+<h4>সিলেট</h4>
+</div>
+ট্রানস্ক্রিপ্ট/সমমান সার্টিফিকেট এর জন্য অাবেদন <br>
+<hr>
+(যথাযথ কর্তৃপক্ষের মাধ্যমে পরীক্ষা নিয়ন্ত্রকের অফিসে জমা দিতে হবে) <br>
+০১। ছাত্র/ছাত্রীর নাম: <br>
+</page>
+
+
+  <div class="text-center">
   <a class="btn btn-primary" href="{% url 'download_transcript_pdf' post.pk %}" role="button">Download</a>
 </div>
 {% endblock content %}
