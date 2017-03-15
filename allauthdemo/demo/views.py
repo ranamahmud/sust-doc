@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+from __future__ import unicode_literals
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import LibraryFine
@@ -62,6 +64,8 @@ def shahparan_hall_new(request):
             form = ShahparanHallForm(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                  #user 
+                post.user = request.user    
                 post.published_date = timezone.now()
                 post.save()
                 return redirect('shahparan_hall_print', pk = post.pk)
@@ -102,6 +106,8 @@ def transcript_new(request):
             form = TranscriptForm(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                #user 
+                post.user = request.user    
                 post.published_date = timezone.now()
                 post.save()
                 return redirect('transcript_print',pk=post.pk)
@@ -142,6 +148,7 @@ def gradesheet_new(request):
             form = GradesheeteForm(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                post.user = request.user
                 post.published_date = timezone.now()
                 post.save()
                 return redirect(request, 'gradesheet_print', pk=post.pk)
@@ -182,6 +189,7 @@ def cash_memo_new(request):
             form = CashMemoForm(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                post.user = redirect.user
                 post.published_date = timezone.now()
                 post.save()
                 return redirect(request, 'cashmemo_print', pk=post.pk)
@@ -224,6 +232,7 @@ def S_2_new(request):
             form = S2Form(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                post.user = request.user
                 post.published_date = timezone.now()
                 post.save()
                 return redirect(request, 's2_print', pk=post.pk)
@@ -261,6 +270,7 @@ def STD_6_new(request):
             form = STD6Form(request.POST)
             if form.is_valid():
                 post = form.save(commit=False)
+                post.user = request.user
                 post.published_date = timezone.now()
                 post.save()
                 return redirect(request, 'std6_print', pk=post.pk)

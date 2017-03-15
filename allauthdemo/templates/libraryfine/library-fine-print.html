@@ -2,34 +2,44 @@
 {% load i18n %}
 {% load bootstrap3 %}
 {% load account socialaccount %}
+{% load static %}
+
 {% block title %}
 {% block head_title %}{% trans "Print Library Fine" %}{% endblock %}
 {% endblock %}
 {% block content %}
-<div class="text-center">
-<h1>Print your application</h1>
- <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-                {{post.user}}
-            </div>
-        {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+<link rel="stylesheet" type="text/css" href="{% static 'css/paper.css' %}" />
+<h1 class="text-center">Print your application</h1>
+ <page size="A4">
+
+তারিখ: {{ post.date }}<br>
+বরাবর,<br>
+কেন্দ্রীয় গ্রন্থাগার, শাবিপ্রবি, সিলেট । <br>
 
 
-    {{ user.department}} {{ user.year }} 
-    {{ post.book_count }}
-    {{ post.amount_fined }}
-    {{ user.name }}
-    {{ user.department }}
-    {{ user.reg_no }}
-    {{ user.year }}
-    {{ user.semseter }}
-    <br>
+বিষয়: জরিমানা প্রদান প্রসঙ্গে।<br>
+জনাব,<br>
+যথাবিহীত সম্মানপূর্বক নিবেদন এই যে অামি এই বিশ্ববিদ্যালয়ের {{ user.department }}
+বিভাগের {{ user.year }} বর্ষের একজন নিয়মিত {{ user.gender }} এবং নিয়মিত
+গ্রন্থাগার ব্যবহারকারী। অামি কিছুদিন পূর্বে কেন্দ্রীয় গ্রন্থাগার হতে  {{ post.book_count }} টি
+বই ধার নেই । অামার ব্যক্তিগত অসুবিধা থাকার কারণে নির্দিষ্ট সময়ের মধ্যে বই ফেরত দিতে পারিনি ।
+যার ফলে গ্রন্থাগার অাইন অনুযায়ী অামার উপর {{ post.amount_fined }} টাকা জরিমানা ধার্য
+করা হয়।<br><br><br>
+অতএব, জনাবের নিকট অামার অাবেদন , অামার উপর ধার্য হওয়া জরিমানা গ্রহণ করে পুনরায় বই ধার দেওয়ার অনুমতি দান করবেন । 
+<br><br>
+বিনীত<br>
+অাপনার বিশ্বস্থ,<br>
+নাম: {{ user.name }} <br>
+বিভাগ: {{ user.department }}<br>
+রেজি নং: {{ user.reg_no }}<br>
+বর্ষ/সেমিস্টার : {{ user.year }}/{{ user.semester}} ৃ<br>
+ব্যাংক রসিদ নং : {{ post.receipt }}<br>
+স্বাক্ষর: <br>
+ </page>
+ <div class="text-center">
   <a class="btn btn-primary" href="{% url 'download_library_fine_pdf' post.pk %}" role="button">Download</a>
+
 </div>
+
 
 {% endblock content %}

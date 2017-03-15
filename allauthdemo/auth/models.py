@@ -67,14 +67,12 @@ class DemoUser(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
     #Custom fields
-    department = models.CharField(max_length=3,blank=False,null=False)
-    reg_no = models.IntegerField(blank=False,null=False)
-    session = models.CharField(max_length=7,blank=False,null=False)
-    year = models.IntegerField(blank=False,null=False)
-    semester = models.IntegerField(blank=False,null=False)
-    phone = models.IntegerField(blank=False,null=False)
-
-
+    department = models.CharField(max_length=3,default = "",blank=True,null=True)
+    reg_no = models.IntegerField(default = 0,blank=True,null=True)
+    session = models.CharField(max_length=7,blank=True,null=True)
+    year = models.IntegerField(default=1,blank=True,null=True)
+    semester = models.IntegerField(default=1,blank=True,null=True)
+    phone = models.IntegerField(default = 0,blank=True,null=True)
 
 
     objects = MyUserManager()
