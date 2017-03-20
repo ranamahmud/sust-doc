@@ -86,3 +86,4 @@ class DemoUserAdmin(UserAdmin):
 #admin.site.unregister(DjangoDefaultUser)
 admin.site.register(DemoUser, DemoUserAdmin)
 admin.site.site_header = 'SUST DOC'
+admin.site.index_title = 'SUST DOC Administration'

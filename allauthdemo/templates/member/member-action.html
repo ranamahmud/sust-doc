@@ -10,25 +10,25 @@
   <ul class="nav navbar-nav">
    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Library <span class="caret"></span></a>
      <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Library Fine Application</a></li>
+      <li><a href="{% url 'library_fine_new' %}">Library Fine Application</a></li>
      </ul>
    </li>
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Hall <span class="caret"></span></a>
      <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Shahparan Hall Admission Form</a></li>
+      <li><a href="{% url 'shahparan_hall_new' %}">Shahparan Hall Admission Form</a></li>
      </ul>
    </li>
      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrar <span class="caret"></span></a>
      <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Transcript</a></li>
-       <li><a href="#">Gradesheet</a></li>
+      <li><a href="{% url 'transcript_new' %}">Transcript</a></li>
+       <li><a href="{% url 'gradesheet_new' %}">Gradesheet</a></li>
      </ul>
    </li>
      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Bank <span class="caret"></span></a>
      <ul class="dropdown-menu" role="menu">
-      <li><a href="#">S2</a></li>
-       <li><a href="#">STD6</a></li>
-        <li><a href="#">Recepit</a></li>
+      <li><a href="{% url 's_2_new' %}">S2</a></li>
+       <li><a href="{% url 'std_6_new' %}">STD6</a></li>
+        <li><a href="{% url 'cash_memo_new' %}">Recepit</a></li>
      </ul>
    </li>
    
@@ -43,26 +43,12 @@
  </div>
 </div>
 
-        <!--<a href="{% url 'library_fine_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> Library Fine</a><br>
 
-        <a href="{% url 'shahparan_hall_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> Shahparan Hall Admission Form</a><br>
 
-        <a href="{% url 'transcript_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> Transcript</a><br>
 
-        <a href="{% url 'gradesheet_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> Gradesheet</a><br>
 
-        <a href="{% url 'cash_memo_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> Cash memo</a><br>
 
-        <a href="{% url 's_2_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> S-2</a><br>
 
-        <a href="{% url 'std_6_new' %}"class="top-menu"><span class="glyphicon glyphicon-plus">
-     </span> STD-6</a><br>-->
 
 </div>
 {% endblock %}
