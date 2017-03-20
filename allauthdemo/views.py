@@ -11,7 +11,7 @@ def member_index(request):
     return HttpResponse(t.render(c, request), content_type='text/html')
 
 @login_required
-def member_action(request):
+def documents(request):
     t = loader.get_template('member/member-action.html')
     c = {}  #{'foo': 'bar'}
     return HttpResponse(t.render(c, request), content_type='text/html')

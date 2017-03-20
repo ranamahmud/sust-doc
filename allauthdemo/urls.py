@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 from .auth.views import account_profile
-from .views import member_index, member_action
+from .views import member_index, documents
 from demo import views 
 urlpatterns = [
     # Landing page area
@@ -71,7 +71,7 @@ urlpatterns = [
     # Account profile and member info done locally
     url(r'^accounts/profile/$', account_profile, name='account_profile'),
     url(r'^member/$', member_index, name='user_home'),
-    url(r'^member/action$', member_action, name='user_action'),
+    url(r'^documents$', documents, name='user_action'),
 
     # Usual Django admin
     url(r'^admin/', admin.site.urls),
