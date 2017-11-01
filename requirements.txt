@@ -15,7 +15,6 @@ blaze==0.8.3
 bokeh==0.10.0
 boto==2.38.0
 Bottleneck==1.0.0
-cdecimal==2.3
 cffi==1.2.1
 clyent==0.4.0
 colorama==0.3.3
