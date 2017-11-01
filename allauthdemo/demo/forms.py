@@ -10,12 +10,14 @@ class LibraryFineForm(forms.ModelForm):
 
 
 class ShahparanHallForm(forms.ModelForm):
-
+   
     class Meta:
         model = ShahparanHall
         fields = '__all__'
         exclude = ['user','created_date','published_date']
         widgets = {'date': forms.DateInput()}
+        
+        
 class TranscriptForm(forms.ModelForm):
     
     class Meta:

@@ -1,0 +1,17 @@
+
+1.Install Python
+2.Cd in to the sustdoc folder using terminal
+3.install required packages by running
+pip install -r requirements.txt
+
+
+
+4.Run in ther terminal 
+python manage.py runserver
+
+5.Open Browser and go to
+http://127.0.0.1:8000/
+
+6.Login using
+username: ranamd0@gmail.com
+password: ranastat90
