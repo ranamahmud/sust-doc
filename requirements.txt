@@ -166,7 +166,7 @@ unicodecsv==0.14.1
 w3lib==1.17.0
 webencodings==0.5
 webscraping==1.5
-Werkzeug==0.10.4
+Werkzeug==0.15.3
 wordcloud==1.3.1
 wrapt==1.10.8
 xhtml2pdf==0.0.6
