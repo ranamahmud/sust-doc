@@ -113,7 +113,7 @@ PyDispatcher==2.0.5
 pydot==1.2.3
 PyExecJS==1.4.0
 pyflakes==1.0.0
-Pygments==2.0.2
+Pygments==2.7.4
 PyJWT==1.4.2
 pylint==1.6.5
 pyOpenSSL==0.15.1
