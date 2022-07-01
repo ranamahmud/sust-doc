@@ -87,7 +87,7 @@ numexpr==2.6.2
 numpy==1.13.1
 oauthlib==1.0.3
 odo==0.3.4
-openpyxl==2.2.6
+openpyxl==2.4.2
 packaging==16.8
 pandas==0.20.3
 pandas-datareader==0.4.0
