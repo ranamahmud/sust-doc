@@ -68,7 +68,7 @@ jupyter-console==4.0.3
 jupyter-core==4.0.6
 lazy-object-proxy==1.2.2
 llvmlite==0.7.0+3.g1ec568f
-lxml==3.4.4
+lxml==4.9.1
 MarkupSafe==0.23
 matplotlib==1.4.3
 mccabe==0.6.1
